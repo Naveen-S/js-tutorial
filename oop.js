@@ -2,7 +2,7 @@
     Javascript makes use of function constructor pattern to achieve OOP.
 */
 'use strict'
-// Standard among JS ecosystem is function constructor has function name starts with a Capital.
+// Standard among JS ecosystem is function constructor has function name starts with a Capital. / Psuedo classical
 function Person(firstName, lastName) {
     this.firstName = firstName;
     this.lastName = lastName;
@@ -18,7 +18,7 @@ let shetty = new Person('Ashish', 'Shetty');
 console.log(shetty);
 
 /* 
-    The above is similar to below, but not 100% same.
+    The above is similar to below, but not 100% same. **** Because the new operator does one more thing. 
     let shetty = {};
     Person.call(shetty, 'Ashish', 'Shetty');
     console.log(shetty);
@@ -70,6 +70,7 @@ rama.closuredFullName(); // Private fields maintained
     From the above example rama will have a __proto__ property, and Person function will have a prototype property,
     this __proto__ property points to prototype property of function constructor. 
     That's how prototypal inheritance is achieved.
+    (the keyword `new` will automatically do this.)
 */ 
 
 Person1.prototype.prototypalFullName = function () {
