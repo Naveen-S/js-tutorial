@@ -43,6 +43,10 @@ let obj = {
         console.log(this);
     },
 
+    sayMyNameFat: (function() {
+        console.log(this);
+    }).bind(this)()
+
 }
 
 obj.sayMyName();
@@ -50,7 +54,7 @@ obj.sayMyNameLaterTraditional();
 obj.sayMyNameLater(); // Fat arrow fixes the issue! Hurray! 
 
 obj.sayMyNameFatArrow(); // Gotcha!
-
+obj.sayMyNameFat()
 
 /*
     Internals:
@@ -58,7 +62,6 @@ obj.sayMyNameFatArrow(); // Gotcha!
 
 let obj1 = {
     name: 'Chen Yu Fei',
- 
     sayMyNameLater: function() {
        setTimeout(() => {
            console.log('With Fat arrow later: ', this);

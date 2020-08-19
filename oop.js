@@ -20,7 +20,7 @@ console.log(shetty);
 /* 
     The above is similar to below, but not 100% same. **** Because the new operator does one more thing. 
     let shetty = {};
-    Person.call(shetty, 'Ashish', 'Shetty');
+    Person.call(shetty, 'Ashish', 'Shetty'); 
     console.log(shetty);
 */
 
@@ -60,7 +60,7 @@ rama.closuredFullName(); // Private fields maintained
 
 
 // Method 2
-// Add methods to prootype of the function
+// Add methods to prototype of the function
 /* 
     Aside:
     Like how every object have __proto__ property, every function will have a prototype property.
