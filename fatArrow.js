@@ -2,6 +2,9 @@
     Why did JS introduce fat arrow syntax?
     - shorter syntax.
     - better handling of this. // Wooo! interesting!
+    ( Assume a obj with a function as a property when you call that function it will have a scope of obj but if that function 
+     has one more function defined inside it and you call it from outer function, the **this** inside inner function will be window. 
+     This can be sorted using arrow functions.)
 
 */
 
